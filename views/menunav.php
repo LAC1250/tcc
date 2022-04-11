@@ -142,11 +142,11 @@
       </div>
       <ul class="nav" id="nav">
         <?php
-        foreach ($tempos as $tempo) {
+        foreach ($tempos as $tempo1) {
           $caminho = APP;
           echo "
           <li class='nav-item'>
-            <a class='nav-item active' aria-current='page' href='$caminho/CYS/tempo/{$tempo['id']}'>{$tempo['descricao']}</a>
+            <a class='nav-item active' aria-current='page' href='$caminho/CYS/tempo/{$tempo1['id']}'>{$tempo1['descricao']}</a>
           </li>
           ";
         }
