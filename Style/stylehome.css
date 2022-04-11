@@ -1,0 +1,61 @@
+  html, body{
+    height: 100%;
+    width: 100%;
+   }
+  body{
+    background-image: url(../Style/index.png);
+
+  }
+  #circle{
+    width: 200px;
+    height: 200px;
+    background-color:#fff;
+    border-radius: 50%;
+  }
+  #id{
+    text-align: center;
+    position: relative;
+  }
+   .circle{
+     position: absolute;
+     top: 180px;
+     left: 45%;
+   }
+   .desc{
+     text-align: center;
+     position: relative;
+     top: 25%;
+   }
+   .id{
+     top: 80px;
+   }
+   .circle1{
+     position:absolute;
+     bottom:400px;
+     right:300px;
+   }
+   .circle2{
+     position:absolute;
+     bottom:220px;
+     right:150px;
+   }
+   .circle3{
+     position:absolute;
+     bottom:50px;
+     right:300px;
+   }
+   .circle4{
+     position:absolute;
+     left: 25%;
+     top:20%;
+   }
+   .circle5{
+    position:absolute;
+    top:30%;
+    left:14%;
+   }
+   .circle6{
+     position:absolute;
+     top:60%;
+     left:25%;
+   }
