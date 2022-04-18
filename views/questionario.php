@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href='<?php echo $caminho; ?>/Style/style.css'>
     <link rel="stylesheet" href='<?php echo $caminho; ?>/Style/stylemenu.css'>
+    <link rel="stylesheet" href='<?php echo $caminho; ?>/Style/stylePlayer.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>C.Y.S - Aprendendo Inglês com Músicas</title>
   </head>
@@ -124,6 +126,17 @@
     .conteudo{
       font-size: 15px;
     }
+    #responder{
+      border: none;
+      padding: 10px;
+      text-decoration: none;
+      position: fixed;
+      top: 350px;
+      left: 540px;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 5px;
+    }
   </style>
   <body>
     <div id="menu-bar">
@@ -155,8 +168,41 @@
           </li>
       </ul>
     <div class="menu-bg" id="menu-bg"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="<?php echo $caminho; ?>/scripts/scriptmenu.js"></script>
+    <div id="containerPlayer">
+      <div id="player">
+          <div class="music-container" id="music-container">
+              <div class="music-info">
+                  <h4 id="title"></h4>
+                  <div class="progress-container" id="progress-container">
+                    <div class="progress" id="progress"></div>
+                  </div>
+              </div>
+              <audio src='' id="audio"></audio>
+              <div class="img-container">
+                <img src='' alt="music-cover" id="cover"/>
+              </div>
+              <div class="navigation">
+                <button id="prev" class="action-btn">
+                  <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big">
+                  <i class="fas fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                  <i class="fas fa-forward"></i>
+                </button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <button type="button" name="button" id="responder">Responder Questionário</button>
+    <div id="containerModal">
+
+    </div>
+    <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src = "<?php echo $caminho; ?>/Scripts/scriptmenu.js"></script>
+    <script src = "<?php echo $caminho; ?>/Scripts/scriptModal.js"></script>
+    <script src = "<?php echo $caminho; ?>/Scripts/scriptPlayer.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </body>
   <footer class="fixed-bottom d-flex justify-content-center"> C.Y.S &COPY; 2022 - Todos os direitos reservados.</footer>

@@ -173,7 +173,7 @@
         foreach ($musicas as $musica) {
           echo "
           <p class = 'title_music'>{$musica['titulo']}</p>
-          <p><a class = 'link' href='$caminho/CYS/questionario/{$musica['id']}'>Responder questionário</a></p>
+          <p><a class = 'link' href='$caminho/CYS/questionario/{$musica['id']}'>Escutar Música</a></p>
           ";
         }
        ?>
