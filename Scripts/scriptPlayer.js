@@ -10,13 +10,11 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 
 
-
 function loadSong(song) {
   title.innerText = song;
   audio.src = `../audios/${song}.mp3`
   cover.src = `../imagens/${song}.jpg`
 
-  
 }
 
 function playSong() {

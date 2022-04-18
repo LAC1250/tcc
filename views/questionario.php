@@ -137,6 +137,11 @@
       cursor: pointer;
       border-radius: 5px;
     }
+    .music-container{
+        bottom: 250px;
+        position: fixed;
+        left: 440px;
+    }
   </style>
   <body>
     <div id="menu-bar">
@@ -177,9 +182,9 @@
                     <div class="progress" id="progress"></div>
                   </div>
               </div>
-              <audio src='' id="audio"></audio>
+              <audio src="" id="audio"></audio>
               <div class="img-container">
-                <img src='' alt="music-cover" id="cover"/>
+                <img src="" id="cover"/>
               </div>
               <div class="navigation">
                 <button id="prev" class="action-btn">
