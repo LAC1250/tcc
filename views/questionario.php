@@ -173,37 +173,14 @@
           </li>
       </ul>
     <div class="menu-bg" id="menu-bg"></div>
-    <div id="containerPlayer">
-      <div id="player">
-          <div class="music-container" id="music-container">
-              <div class="music-info">
-                  <h4 id="title"></h4>
-                  <div class="progress-container" id="progress-container">
-                    <div class="progress" id="progress"></div>
-                  </div>
-              </div>
-              <audio src="" id="audio"></audio>
-              <div class="img-container">
-                <img src="" id="cover"/>
-              </div>
-              <div class="navigation">
-                <button id="prev" class="action-btn">
-                  <i class="fas fa-backward"></i>
-                </button>
-                <button id="play" class="action-btn action-btn-big">
-                  <i class="fas fa-play"></i>
-                </button>
-                <button id="next" class="action-btn">
-                  <i class="fas fa-forward"></i>
-                </button>
-              </div>
-          </div>
-      </div>
-    </div>
-    <button type="button" name="button" id="responder">Responder Questionário</button>
-    <div id="containerModal">
+  </div>
+  <div id="containerPlayer">
 
-    </div>
+  </div>
+  <button type="button" name="button" id="responder">Responder Questionário</button>
+  <div id="containerModal">
+
+  </div>
     <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src = "<?php echo $caminho; ?>/Scripts/scriptmenu.js"></script>
     <script src = "<?php echo $caminho; ?>/Scripts/scriptModal.js"></script>
