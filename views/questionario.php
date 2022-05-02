@@ -142,6 +142,12 @@
         position: fixed;
         left: 440px;
     }
+    .arrow{
+      text-decoration: none;
+      position: fixed;
+      color: black;
+    }
+
   </style>
   <body>
     <div id="menu-bar">
@@ -174,8 +180,42 @@
       </ul>
     <div class="menu-bg" id="menu-bg"></div>
   </div>
+  <ul>
+    <?php
+    $caminho = APP;
+    echo "
+      <li>
+        <a href='$caminho/CYS/questionario/{$tempo1['id']}'>Voltar</a>
+      </li>
+    ";
+     ?>
+  </ul>
   <div id="containerPlayer">
-
+    <div id='player'>
+        <div class='music-container' id='music-container'>
+            <div class='music-info'>
+                <h4 id='title'></h4>
+                <div class='progress-container' id='progress-container'>
+                  <div class='progress' id='progress'></div>
+                </div>
+            </div>
+            <audio src='<?php $caminho ?>/audios/' id='audio'></audio>
+            <div class='img-container'>
+              <img src='<?php $caminho ?>/imagens/' id='cover'/>
+            </div>
+            <div class='navigation'>
+              <button id='prev' class='action-btn'>
+                <i class='fas fa-backward'></i>
+              </button>
+              <button id='play' class='action-btn action-btn-big'>
+                <i class='fas fa-play'></i>
+              </button>
+              <button id='next' class='action-btn'>
+                <i class='fas fa-forward'></i>
+              </button>
+            </div>
+        </div>
+    </div>
   </div>
   <button type="button" name="button" id="responder">Responder Questionário</button>
   <div id="containerModal">
