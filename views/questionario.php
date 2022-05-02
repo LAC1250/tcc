@@ -185,7 +185,7 @@
     $caminho = APP;
     echo "
       <li>
-        <a href='$caminho/CYS/questionario/{$tempo1['id']}'>Voltar</a>
+        <a href='$caminho/CYS/tempo/{$tempo['id']}'>Voltar</a>
       </li>
     ";
      ?>
