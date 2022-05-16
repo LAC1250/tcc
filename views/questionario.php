@@ -142,12 +142,20 @@
         position: fixed;
         left: 440px;
     }
-    .arrow{
+    .voltar li a{
       text-decoration: none;
-      position: fixed;
+      position: relative;
+      list-style: none;
+      left: 12px;
       color: black;
     }
-
+    .progress{
+      background-color: white;
+      border-radius: 2px;
+      height: 100%;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
   </style>
   <body>
     <div id="menu-bar">
@@ -180,12 +188,14 @@
       </ul>
     <div class="menu-bg" id="menu-bg"></div>
   </div>
-  <ul>
+  <ul class="voltar">
     <?php
     $caminho = APP;
     echo "
-      <li>
-        <a href='$caminho/CYS/tempo/{$tempo['id']}'>Voltar</a>
+      <li class=''>
+      <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-arrow-left-short' viewBox='0 0 16 16'>
+        <path fill-rule='evenodd' d='M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z'/>
+      </svg><a href='$caminho/CYS/tempo/{$musica['id_tempo']}'>Voltar</a>
       </li>
     ";
      ?>
@@ -194,14 +204,15 @@
     <div id='player'>
         <div class='music-container' id='music-container'>
             <div class='music-info'>
-                <h4 id='title'></h4>
+                <h4 id='title'><?php echo $musica['titulo']?></h4>
+                <h4 id='artists'><?php echo $musica['artistas']?></h4>
                 <div class='progress-container' id='progress-container'>
                   <div class='progress' id='progress'></div>
                 </div>
             </div>
-            <audio src='<?php $caminho ?>/audios/' id='audio'></audio>
+            <audio src='<?php echo $caminho.'/audios/'.$musica['audio']; ?>' id='audio'></audio>
             <div class='img-container'>
-              <img src='<?php $caminho ?>/imagens/' id='cover'/>
+              <img src='<?php echo $caminho.'/imagens/'.$musica['imagem']; ?>' id='cover'/>
             </div>
             <div class='navigation'>
               <button id='prev' class='action-btn'>

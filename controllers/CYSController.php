@@ -31,7 +31,8 @@
     public function questionario($id){
       $modelTempo = new Tempo();
       $tempos = $modelTempo->read();
-
+      $modelmusica = new Musica();
+      $musica = $modelmusica -> getById($id);
       require_once 'views/questionario.php';
     }
   }
