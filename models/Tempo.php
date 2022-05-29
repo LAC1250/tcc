@@ -3,12 +3,23 @@
         protected $tabela = "tempos";
         protected $ordem = "descricao";
 
-        function returnName(){
-          $sql = "SELECT descricao FROM tempos";
-          $sentenca = $this->conexao -> query($sql);
+        function getbyName($id){
+          $sql = "SELECT descricao FROM tempos WHERE :id =:id";
+          $sentenca = $this->conexao -> prepare($sql);
+          $sentenca -> bindParam(":id",$id);
+          $sentenca -> execute();
           $sentenca->setFetchMode(PDO::FETCH_ASSOC);
-          $consulta = $sentenca -> fetchAll();
-          return $consulta;
+          $dados = $sentenca -> fetchAll();
+          return $dados;
         }
+        /*public function getById1($id){
+          $sql = "SELECT descricao FROM tempos WHERE :id =:id";
+          $sentenca = $this->conexao -> prepare($sql);
+          $sentenca -> bindParam(":id",$id);
+          $sentenca -> execute();
+          $sentenca->setFetchMode(PDO::FETCH_ASSOC);
+          $dados = $sentenca -> fetch();
+          return $dados;
+        }*/
     }
 ?>

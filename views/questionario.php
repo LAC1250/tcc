@@ -130,17 +130,18 @@
       border: none;
       padding: 10px;
       text-decoration: none;
+      color: black;
       position: fixed;
-      top: 350px;
-      left: 540px;
+      top: 280px;
+      left: 800px;
       justify-content: center;
       cursor: pointer;
       border-radius: 5px;
     }
     .music-container{
-        bottom: 250px;
+        bottom: 200px;
         position: fixed;
-        left: 440px;
+        left: 350px;
     }
     .voltar li a{
       text-decoration: none;
@@ -156,6 +157,12 @@
       width: 0%;
       transition: width 0.1s linear;
     }
+    .#tempo_verbal{
+      position: fixed;
+      left: 80%;
+      bottom: 90%;
+      font-size: 25px;
+    }
   </style>
   <body>
     <div id="menu-bar">
@@ -166,11 +173,11 @@
       </div>
       <ul class="nav" id="nav">
         <?php
-        foreach ($tempos as $tempo) {
+        foreach ($tempos as $tempo1) {
           $caminho = APP;
           echo "
           <li class='nav-item'>
-            <a class='nav-item active' aria-current='page' href='$caminho/CYS/tempo/{$tempo['id']}'>{$tempo['descricao']}</a>
+            <a class='nav-item active' aria-current='page' href='$caminho/CYS/tempo/{$tempo1['id']}'>{$tempo1['descricao']}</a>
           </li>
           ";
         }
@@ -200,6 +207,11 @@
     ";
      ?>
   </ul>
+  <h1 class="tempp">
+    <?php
+      echo "<p class='d-flex justify-content-end' id='tempo_verbal'>{$tempo['descricao']}</p>";
+     ?>
+  </h1>
   <div id="containerPlayer">
     <div id='player'>
         <div class='music-container' id='music-container'>
@@ -228,7 +240,11 @@
         </div>
     </div>
   </div>
-  <button type="button" name="button" id="responder">Responder Questionário</button>
+  <a class="responder" name="button" id="responder"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+  <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+  </svg></i> Responder Questionário</a>
   <div id="containerModal">
 
   </div>

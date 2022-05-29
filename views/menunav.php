@@ -163,6 +163,7 @@
           </li>
       </ul>
     <div class="menu-bg" id="menu-bg"></div>
+  </div>
     <h1>
       <?php
         echo "<p class='d-flex justify-content-end' id='tempo_verbal'>{$tempo['descricao']}</p>";
