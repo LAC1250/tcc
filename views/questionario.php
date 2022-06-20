@@ -207,7 +207,7 @@
     ";
      ?>
   </ul>
-  <h1 class="tempp">
+  <h1>
     <?php
       echo "<p class='d-flex justify-content-end' id='tempo_verbal'>{$tempo['descricao']}</p>";
      ?>
@@ -218,13 +218,14 @@
             <div class='music-info'>
                 <h4 id='title'><?php echo $musica['titulo']?></h4>
                 <h4 id='artists'><?php echo $musica['artistas']?></h4>
+                <h4 id=''><?php echo $tempo['descricao']?></h4>
                 <div class='progress-container' id='progress-container'>
                   <div class='progress' id='progress'></div>
                 </div>
             </div>
             <audio src='<?php echo $caminho.'/audios/'.$musica['audio']; ?>' id='audio'></audio>
             <div class='img-container'>
-              <img src='<?php echo $caminho.'/imagens/'.$musica['imagem']; ?>' id='cover'/>
+               <img src='<?php echo $caminho.'/imagens/'.$musica['imagem']; ?>' id='cover'/>
             </div>
             <div class='navigation'>
               <button id='prev' class='action-btn'>

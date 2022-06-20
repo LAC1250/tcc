@@ -35,7 +35,7 @@
       $musica = $modelmusica -> getById($id);
 
       $modelTempo = new Tempo();
-      $tempo = $modelTempo->getById($id);
+      $tempo = $modelTempo->getById($musica['id_tempo']);
 
       require_once 'views/questionario.php';
     }

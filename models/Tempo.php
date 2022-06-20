@@ -12,8 +12,8 @@
           $dados = $sentenca -> fetchAll();
           return $dados;
         }
-        /*public function getById1($id){
-          $sql = "SELECT descricao FROM tempos WHERE :id =:id";
+        /*public function getByIdTempo($id){
+          $sql = "SELECT descricao FROM tempos WHERE id =:id";
           $sentenca = $this->conexao -> prepare($sql);
           $sentenca -> bindParam(":id",$id);
           $sentenca -> execute();
